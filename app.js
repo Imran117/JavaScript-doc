@@ -1,34 +1,19 @@
-// O'zgaruvchanlar #part2
+// Konstanta #part3
 
 /*
-  Oldingi partimizada biz o'zgaruvchanlar qanday yaratish va uning qiymatlarini o'zgartirishni ko'rib chiqqan edik.
-  
-  Hozir esa o'zgaruvchanlarni qanday to'g'ri nomlashni ko'rib chiqamiza
+  Bundan oldingi #part1, #part2 mavzularimizada bizlar o'zgaruvchanlarni korib chiqqan edik. Bundan tashqari Js da o'zgarmas saqlovchi ham bor uning nomi konstanta. Agar Matematikani yaxshi bilsangiz oddiy Matematikada ham o'zgarmas qiymatlar bor bunga misol PI soni u o'zgarmas qiymat.
+
+  Konstanta bilan ishlash juda ham onson lekin shuni esda tutinki konstantaga bergan qiymatingizni qayta chaqirib o'zgartira olmaysiz.
 
   Misol: 1
-    let userName = 'Alex'
-    let myClass8 = 8;
-    let $myVar = 'var';
-    let _name = 'Axe';
+    const age = 15;
 
-    quyidagi ko'rganlaringiz bu o'zgaruvchanlarni to'gri nomlash deb ataladi.
-     > userName - camelCase uslubi bilan yozish (orasidan joy ochmagan holatda).
-     > myClass8 - son qoshish imkoniyati (faqat ohiriga qoshish).
-     > $myVar, _name - faqatgina 2ta {$ _} symbol qoshish imkoniyati (bosh va ohriga).
-
-
+    > E'tibor berinki hozir let kaliti sozi o'rniga const kalit so'zi yozilgan shu yo'l bilan konstanta e'lon qilinadi
 
   Misol: 2
-    let user_name = 'Alex'
-    let UserName = 'Alex'
-    let 8myClass = 8;
-    let my-Var = 'var';
-    let const = '1'
+    age = 'Zafar';
 
-   Keyingiz misolimizada o'zgaruvchanlarni mumkin bo'lmagan nomlashlar bilan atash.
-    > user_name - bunday nomlash tavsiya etilmaydi.
-    > UserName - hamma sozlarni bosh harfini kattada yozish tavsiya etilmaydi.
-    > 8myClass - son hichqachon boshidan qoyish mumkin emas.
-    > my-Var - sozlarni - bilan ajratib yozish mumkin emas.
-    > const - maxsus Js kalit so'zlari bilan yozish mutlaqo mumkin emas.
+    > Keyingiz misolimizada ko'rishimiza mumkunki quyida e'lon qilgan konstantamizani o'zgartirmoqchi bo'lmoqdamiz lekin bu mutlaqo no to'g'ri.
+
+  Shunday ekan 'konstanta kerak emas, undan foydalanish noqulay deyishga shoshilmang!'. Konstantadan to'g'ri foydalaning uning ichiga keyinchalik umuman o'zgarmaydigan qiymat solib ishlatsangiz sizga juda ham asqotib qolishi mumkin)
 */
