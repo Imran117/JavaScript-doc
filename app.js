@@ -1,19 +1,34 @@
-// O'zgaruvchanlar #part1
+// O'zgaruvchanlar #part2
 
 /*
-  O'zgaruvchanlar dasturlash sohasida juda ko'p joylarda ishlatiladi. O'zgaruvchanlarni asosiy vazifasi biz ishlatadigan malumotlarni saqlab turish yoki uni ozgartirish uchun kerak boladi
+  Oldingi partimizada biz o'zgaruvchanlar qanday yaratish va uning qiymatlarini o'zgartirishni ko'rib chiqqan edik.
+  
+  Hozir esa o'zgaruvchanlarni qanday to'g'ri nomlashni ko'rib chiqamiza
 
   Misol: 1
-  let name = 'Alex'
-  > let - kalit bolib o'zgaruvchini elon qilish uchun kerak boladi
+    let userName = 'Alex'
+    let myClass8 = 8;
+    let $myVar = 'var';
+    let _name = 'Axe';
 
-  > name - o'zgaruvchiga beriladigan nom. Batafsil malumot olishingiz uchun #part2 ni korishingiz mumkin.
+    quyidagi ko'rganlaringiz bu o'zgaruvchanlarni to'gri nomlash deb ataladi.
+     > userName - camelCase uslubi bilan yozish (orasidan joy ochmagan holatda).
+     > myClass8 - son qoshish imkoniyati (faqat ohiriga qoshish).
+     > $myVar, _name - faqatgina 2ta {$ _} symbol qoshish imkoniyati (bosh va ohriga).
 
-  > = - yaratilgan o'zgaruvchiga malumotingizni saqlash uchun ishlatiladigan symbol
+
 
   Misol: 2
-  name = 'Axe'
+    let user_name = 'Alex'
+    let UserName = 'Alex'
+    let 8myClass = 8;
+    let my-Var = 'var';
+    let const = '1'
 
-  Bu joyda korayotkaningizdek quyidagi ozgaruvchandan biroz farq qilgan holatda huddi shu o'zgaruvchanga boshqa malumot berildi. Ha siz ozingiz yaratkan o'zgaruvchanni qiymatini o'zgartirishingiz mumkin. Lekin eslatib otish joizki siz yaratkan o'zgaruvchanni huddi shu nom bilan qayta yarata olmaysiz.
-  
+   Keyingiz misolimizada o'zgaruvchanlarni mumkin bo'lmagan nomlashlar bilan atash.
+    > user_name - bunday nomlash tavsiya etilmaydi.
+    > UserName - hamma sozlarni bosh harfini kattada yozish tavsiya etilmaydi.
+    > 8myClass - son hichqachon boshidan qoyish mumkin emas.
+    > my-Var - sozlarni - bilan ajratib yozish mumkin emas.
+    > const - maxsus Js kalit so'zlari bilan yozish mutlaqo mumkin emas.
 */
