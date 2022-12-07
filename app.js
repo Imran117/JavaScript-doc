@@ -1,7 +1,43 @@
-// var #part4
+// Operatorlar, Arifmetik operatorlar #part5
 
 /*
-  Var bu o'zgaruvchan yaratish uchun ishlatilgan kalit so'zi. Lekin shuni bilinki var kalit so'zi eskirgan uslub hisoblanadi Js yarlishidan keyin qo'llanilgan ushbu kalit sozi o'rniga hozirgi davrda let va const ishlatsak bo'ladi.
+  Operatorlar nima va nima uchun kerak degan bo'lishi tayin sizlarda hozir operatorlar nechta turgan bo'linishini korib chiqamiza va ular nimaga kerakligini ham ko'rib chiqsak boladi.
 
-  Keyngi darsdalarimizada aynan var va let kaliti nimasi bilan farq qilishini ko'rib chiqamiza)
+  Operatorlar turlari:
+    > 1. Tayinlash operatorlar
+    > 2. Solishtiruv operatorlar
+    > 3. Arifmetik operatorlar
+    > 4. Bitlik operatorlar
+    > 5. Mantiqiy operatorlar
+    > 6. Satrlik operatorlar
+    > 7. 3-talik operatorlar
+    > 8. Vergul operator
+    > 9. 2-talik operatorlar
+
+
+
+  Misol:1 Arifmetik operatorlar
+
+    const width = 10;
+    const height = 5;
+    const space = width * height;
+    console.log(space) // 50
+    -
+    const newWidth = width - 4;
+    const newWidth2 = width + 4;
+    console.log(newWidth2) // 14
+    -
+    const division = newWidth / newWidth2;
+    console.log(division) // qoldiqli son
+    -
+    const volume = 2 ** 3; // 2*2*2
+    console.log(volume)
+    
+  Misol:2 Satr
+    Satrda biz faqat 2ta tekstni bir biriga qo'shsak boladi va buni nomi (Konkatenatsiya) deyiladi.
+
+    const city = 'Tashkent';
+    const street = 'Chilonzor';
+    console.log(city + ', ' + street); // 'Tashkent, Chilonzor'
+
 */
