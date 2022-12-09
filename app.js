@@ -1,36 +1,46 @@
-// Operatorlar ishlash ketmaketligi #part7
+// Ma'lumot turlari #part7
 
 /*
-Quyidagi darslarda sizlar bilan operatorlar va ularning tulari haqida to'xtalib o'tgan edik. Endi esa ularning ishlash ketmaketligini ko'rib chiqsak ham bo'ladi.
-Oddiy qilib etkanda boshlang'ich matematikada o'rgatilingan arifmetik ammallarni ishlashini ko'rsak ham bo'ladi
+Object va primitivlar
+
+Primitiv ma'lumot turlari. nega aynan primitiv oddiy qilib aytkanda biron o'zgaruvchan yaratdiz va uni ichida son bor edi keyin esa uni ichiga satr qo'shib qo'ydingiz e'tibor berinki siz bergan ikkinchi qiymat birinchi bergan qiymatingizni o'rnini egallaydi yani Js shu joyida siz birinchi bergan ma'lumotingizni almashtirib qo'yadi shuning uchun ham shunaqa nom berilgan. Yana buning sabablari juda lekin biza hozir aynan birinchi faktini ko'rib chiqdik.
+
+Object - bu bir ma'lumot turi bo'lin uning ichida kalit va kalitning qiymati beriladi va quyidagi primitiv ma'umot turlarini kalitning qiymati qilib beramiz, undan tashqari object ichida object yaratib katta Ierarxiyalar qilsak ham bo'ladi.
 
   Misol:1
-    operatorlarning bir biridan ustunligini tablitsasini mdn kutubxonasidan ko'rishingiz mumkin.
-    site-> https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence 
-  
-    const isSuited = 100 - 10 > 90 - 5; - (95 kattami 85 dan)
-    console.log(isSuited) // true
+    Primitivlar 7ga bo'linadi
 
-    Bu yerda korsak bo'ladiki hozir javob true qaytdi, sabab ? chunki bu yerda operotlar bir biridan ustunligi sababli endi shu amalni darajasida ko'radigan bo'sak:
-    // 100 - (12) 10 > (10) 90 - (12) 5
-    Qavusga olingan son nima deyishingiz mumkin e'tibor bering bu qavuslar har bitta operatordan keyin yozilmoqda yani bilsak bo'ladiki (-)ning darajasi 12 va (>)ning darajasi 10 bu holda (-)birinchi ishlaydi.
-  
-  Misol:2
-    Ana endi azgina shu mavzuga chuqurlashsak ham bo'ladi. Savol bo'lishi mumkin qanday qilib qaysidir operatorni boshqa operatorlardan ustun qilib qo'yish mumkin degan... Buni yo'li onson bu yo'lni xatto oddiy arifmetikada ham ko'rsak bo'ladi
+    const age = 18; - SON
+    const surname = 'Zafar'; - Satr
+    const isAdmin = true; - True or False
 
-    const a = 6 + 10 / 2 // javob: 11 qaytadi albatta biz kutgan javob kelmadi ana endi shuni boshqacha yo'l bilan qilib ko'rsak ham bo'ladi.
+    const isAdmin = undefined;
+    let data; - qiymat berilmagan
+    let box = null;
+    const admin = Symbol('Admin');
+    const big = BigInt(999999999999999);
 
-    const a = (6 + 10) / 2 // javob: 8 shu joyida bizada quyidagi misolimizada birinchi (/) bajarilayotkan edi. Endi esa (+) birinchi ishga tushmoqda bunga sabab hozir (6 + 10) amalimizani qavusga o'rab qo'yik birinchi ishga tushishi uchun. 
 
-  Misol:3
-    Keyingi misolimizada qiymatning bir nechta o'zgaruvchanga birdanigga qo'shilib ketishini ko'rsak ham bo'ladi.
+    Ko'rgan misollaringiz primitiv ma'lumot turlari hisoblanadi va bu ma'umot turlari o'zgaruvchanniki emas balkm o'zgaruvchan ichidagi qiymatniki desak adashmaymiz.
 
-    let b;
-    let c;
-    c = b = 100 + 50 + 30;
+    Son - Js da son ma'lumot turib bo'lib uni ichiga yaxlit son, qoldiqli sonlarni o'z ichiga oladi. Qoldiqli sonlar doim . bilan qoldig'i yoziladi.
+    --
+    Satr - satr bu oddiy tekst bo'lib tekstni doim '"` qo'shtirnoqlar ostiga olinadi.
+    --
+    Boolean - mantiqiy ma'lumot turi bo'lib true va false javobini o'z ichiga oladi yani (true - rost), (false - yolg'on) degan ma'noni anglatadi.
+    --
+    Undefined - berilmagan qiymat bunday javobni olish uchun oddiy o'zgaruvchan yarating va uni ichiga hech nima kiritmang. agar consolega chiqazib ko'rsak bizaga bu yerda undefined qaytakanini ko'rishimiza mumkin yani quti bor lekin uni ichiga hech nima yo'qligini anglatadi.
+    --
+    Null - bo'shliq bu qiymatni ishlatilinishi kerak bo'lgan yoki ichiga vaqtinchalik berib turish uchun kerak bo'ladigan ma'lumot deb chunsak ham bo'ladi.
+    --
+    Symbol - takrorlanmas ma'lumot turib bo'lib bu qiymat hech nimaga teng bo'lmaydi. Misol uchun {admin == 'admin'} false qaytadi chunki takrorlanmas ma'lumot turi bo'lgandan keyin o'ziga o'xshagan qiymatga ham teng bo'lmaydi.
+    --
+    BigInt - Asosan katta sonlar bilan ishlash uchun moslashgan. Savol bo'lishi mumkin nega oddiy son ma'lumot turida yozsa bo'lmaydimi deb ha! bo'ladi lekin katta sonlarni butunlay chiqazib bera olmaydi. Shuning uchun ham BigInt ma'lumot turi bizlarga bu joyda butunlay katta sonni chiqazib beradi.
 
-    Javobni o'qishdan oldin o'zingiz mdnga kirib operatorlarni darajalarini ko'rib ozingiz bir fikir qilib ko'ring b va c ichiga nima qo'shiladi
+    ******************************
+    Shu quyida keltirilgan misollarni qanday ma'lumot turiga mansubligini bilish uchun {typeOf} kalit so'zidan foydalansak ham bo'ladi
 
-    c = 180
-    b = 180
+      Misol: 
+        let name = 'Alex'
+        console.log(type of name) // String
 */
