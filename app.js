@@ -1,33 +1,36 @@
-// Birlashtiruv va solishtiruv operatorlari #part6
+// Operatorlar ishlash ketmaketligi #part7
 
 /*
-Birlashtiruv operatorlari bu operatorlar asosiy vazifasi malumot qoshish ayirish kopaytirish bolish va hokazo 
+Quyidagi darslarda sizlar bilan operatorlar va ularning tulari haqida to'xtalib o'tgan edik. Endi esa ularning ishlash ketmaketligini ko'rib chiqsak ham bo'ladi.
+Oddiy qilib etkanda boshlang'ich matematikada o'rgatilingan arifmetik ammallarni ishlashini ko'rsak ham bo'ladi
 
   Misol:1
-    let age = 18+5;
-    age += 2; //age = age + 2
-    age -= 3; //age = age - 2
-    age *= 2; //age = age * 2
-    age /= 2; //age = age / 2
+    operatorlarning bir biridan ustunligini tablitsasini mdn kutubxonasidan ko'rishingiz mumkin.
+    site-> https://developer.mozilla.org/ru/docs/Web/JavaScript/Reference/Operators/Operator_Precedence 
+  
+    const isSuited = 100 - 10 > 90 - 5; - (95 kattami 85 dan)
+    console.log(isSuited) // true
 
-    += - vazifasi qoshish boladi deylik {age + 2} shuni chiroyli yozib korsatib berish uchun biza {age += 2} desak ham boladi va buni manosi (age)ga ikki qoshib ketishni anglatadi
-
+    Bu yerda korsak bo'ladiki hozir javob true qaytdi, sabab ? chunki bu yerda operotlar bir biridan ustunligi sababli endi shu amalni darajasida ko'radigan bo'sak:
+    // 100 - (12) 10 > (10) 90 - (12) 5
+    Qavusga olingan son nima deyishingiz mumkin e'tibor bering bu qavuslar har bitta operatordan keyin yozilmoqda yani bilsak bo'ladiki (-)ning darajasi 12 va (>)ning darajasi 10 bu holda (-)birinchi ishlaydi.
+  
   Misol:2
-    age++ - inkrement 
-    age-- - dekrement
+    Ana endi azgina shu mavzuga chuqurlashsak ham bo'ladi. Savol bo'lishi mumkin qanday qilib qaysidir operatorni boshqa operatorlardan ustun qilib qo'yish mumkin degan... Buni yo'li onson bu yo'lni xatto oddiy arifmetikada ham ko'rsak bo'ladi
 
-    Ko'p holatda tsikllarda ma'lum bi hisoblagichga 1 qoshish kerak bo'lib qoladi shunaqa vaziyatga inkrementdan foydalansak bo'ladi. Bu ishimizani va kodimizani tushunarliroq qilib ko'rsatadi.
+    const a = 6 + 10 / 2 // javob: 11 qaytadi albatta biz kutgan javob kelmadi ana endi shuni boshqacha yo'l bilan qilib ko'rsak ham bo'ladi.
 
+    const a = (6 + 10) / 2 // javob: 8 shu joyida bizada quyidagi misolimizada birinchi (/) bajarilayotkan edi. Endi esa (+) birinchi ishga tushmoqda bunga sabab hozir (6 + 10) amalimizani qavusga o'rab qo'yik birinchi ishga tushishi uchun. 
 
-Solishtiruv operatorlari. Bu operatorlar juda ham ko'p joylarda uchratsak bo'ladi. Ularning asosiy vazifasi biron nimaga aniqlik kiritish hisoblanadi yani solishtirish.
+  Misol:3
+    Keyingi misolimizada qiymatning bir nechta o'zgaruvchanga birdanigga qo'shilib ketishini ko'rsak ham bo'ladi.
 
-  Misol:
-    const vasia = 20;
-    console.log(age > vasia) - age kattami vasiadan // true
-    console.log(age >= vasia) - age katta yoki tengmi vasiaga // true
-    console.log(age < vasia)  - age kichkinami vasiadan // false
-    console.log(age <= vasia) - age kichkina yoki tengmi vasiaga // false
-    console.log(age == vasia) - age tengmi vasiaga // false
+    let b;
+    let c;
+    c = b = 100 + 50 + 30;
 
-    {true va false} nimaligini keyingi darslarimizada korib chiqshimiza mumkin. Oddiy qilib aytganda {true} - rost degani, {false} - yolg'on degani.
+    Javobni o'qishdan oldin o'zingiz mdnga kirib operatorlarni darajalarini ko'rib ozingiz bir fikir qilib ko'ring b va c ichiga nima qo'shiladi
+
+    c = 180
+    b = 180
 */
