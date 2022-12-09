@@ -1,43 +1,33 @@
-// Operatorlar, Arifmetik operatorlar #part5
+// Birlashtiruv va solishtiruv operatorlari #part6
 
 /*
-  Operatorlar nima va nima uchun kerak degan bo'lishi tayin sizlarda hozir operatorlar nechta turgan bo'linishini korib chiqamiza va ular nimaga kerakligini ham ko'rib chiqsak boladi.
+Birlashtiruv operatorlari bu operatorlar asosiy vazifasi malumot qoshish ayirish kopaytirish bolish va hokazo 
 
-  Operatorlar turlari:
-    > 1. Tayinlash operatorlar
-    > 2. Solishtiruv operatorlar
-    > 3. Arifmetik operatorlar
-    > 4. Bitlik operatorlar
-    > 5. Mantiqiy operatorlar
-    > 6. Satrlik operatorlar
-    > 7. 3-talik operatorlar
-    > 8. Vergul operator
-    > 9. 2-talik operatorlar
+  Misol:1
+    let age = 18+5;
+    age += 2; //age = age + 2
+    age -= 3; //age = age - 2
+    age *= 2; //age = age * 2
+    age /= 2; //age = age / 2
+
+    += - vazifasi qoshish boladi deylik {age + 2} shuni chiroyli yozib korsatib berish uchun biza {age += 2} desak ham boladi va buni manosi (age)ga ikki qoshib ketishni anglatadi
+
+  Misol:2
+    age++ - inkrement 
+    age-- - dekrement
+
+    Ko'p holatda tsikllarda ma'lum bi hisoblagichga 1 qoshish kerak bo'lib qoladi shunaqa vaziyatga inkrementdan foydalansak bo'ladi. Bu ishimizani va kodimizani tushunarliroq qilib ko'rsatadi.
 
 
+Solishtiruv operatorlari. Bu operatorlar juda ham ko'p joylarda uchratsak bo'ladi. Ularning asosiy vazifasi biron nimaga aniqlik kiritish hisoblanadi yani solishtirish.
 
-  Misol:1 Arifmetik operatorlar
+  Misol:
+    const vasia = 20;
+    console.log(age > vasia) - age kattami vasiadan // true
+    console.log(age >= vasia) - age katta yoki tengmi vasiaga // true
+    console.log(age < vasia)  - age kichkinami vasiadan // false
+    console.log(age <= vasia) - age kichkina yoki tengmi vasiaga // false
+    console.log(age == vasia) - age tengmi vasiaga // false
 
-    const width = 10;
-    const height = 5;
-    const space = width * height;
-    console.log(space) // 50
-    -
-    const newWidth = width - 4;
-    const newWidth2 = width + 4;
-    console.log(newWidth2) // 14
-    -
-    const division = newWidth / newWidth2;
-    console.log(division) // qoldiqli son
-    -
-    const volume = 2 ** 3; // 2*2*2
-    console.log(volume)
-    
-  Misol:2 Satr
-    Satrda biz faqat 2ta tekstni bir biriga qo'shsak boladi va buni nomi (Konkatenatsiya) deyiladi.
-
-    const city = 'Tashkent';
-    const street = 'Chilonzor';
-    console.log(city + ', ' + street); // 'Tashkent, Chilonzor'
-
+    {true va false} nimaligini keyingi darslarimizada korib chiqshimiza mumkin. Oddiy qilib aytganda {true} - rost degani, {false} - yolg'on degani.
 */
